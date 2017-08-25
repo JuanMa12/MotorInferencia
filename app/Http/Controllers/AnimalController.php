@@ -83,4 +83,14 @@ class AnimalController extends Controller
 
       return response()->json(['animal' => $animal]);
     }
+
+    public function glasses(Request $request)
+    {
+      $domestic = $request->domestic;
+      $glasses = $request->glasses;
+
+      $animal = Animal::where('domestic',$domestic)->where('glasses',$glasses)->first();
+
+      return response()->json(['animal' => $animal]);
+    }
 }

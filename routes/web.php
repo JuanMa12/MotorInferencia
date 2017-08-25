@@ -30,3 +30,4 @@ Route::get('/jump', 'AnimalController@jump');
 Route::get('/stripes', 'AnimalController@stripes');
 Route::get('/mount', 'AnimalController@mount');
 Route::get('/flying', 'AnimalController@flying');
+Route::get('/glasses', 'AnimalController@glasses');

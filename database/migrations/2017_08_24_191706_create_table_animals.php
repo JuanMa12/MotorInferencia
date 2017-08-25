@@ -25,6 +25,7 @@ class CreateTableAnimals extends Migration
           $table->string('mount')->default('false');
           $table->string('rodent')->default('false');
           $table->string('stripes')->default('false');
+          $table->string('glasses')->default('false');
           $table->timestamps();
       });
     }

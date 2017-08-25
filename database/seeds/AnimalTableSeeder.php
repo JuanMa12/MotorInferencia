@@ -23,7 +23,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'false',
         'rodent'        => 'false',
-        'stripes'       => 'true'
+        'stripes'       => 'true',
+        'glasses'       => 'false'
       ]);
 
       Animal::create([
@@ -37,7 +38,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'false',
         'rodent'        => 'false',
-        'stripes'       => 'false'
+        'stripes'       => 'false',
+        'glasses'       => 'false'
       ]);
 
       Animal::create([
@@ -51,7 +53,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'false',
         'rodent'        => 'false',
-        'stripes'       => 'false'
+        'stripes'       => 'false',
+        'glasses'       => 'true'
       ]);
 
       Animal::create([
@@ -65,7 +68,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'true',
         'rodent'        => 'false',
-        'stripes'       => 'false'
+        'stripes'       => 'false',
+        'glasses'       => 'false'
       ]);
 
       Animal::create([
@@ -79,7 +83,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'false',
         'rodent'        => 'false',
-        'stripes'       => 'true'
+        'stripes'       => 'true',
+        'glasses'       => 'false'
       ]);
 
       Animal::create([
@@ -93,7 +98,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'false',
         'rodent'        => 'true',
-        'stripes'       => 'false'
+        'stripes'       => 'false',
+        'glasses'       => 'false'
       ]);
 
       Animal::create([
@@ -107,7 +113,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'false',
         'mount'         => 'true',
         'rodent'        => 'false',
-        'stripes'       => 'false'
+        'stripes'       => 'false',
+        'glasses'       => 'false'
       ]);
 
       Animal::create([
@@ -121,7 +128,8 @@ class AnimalTableSeeder extends Seeder
         'flying'        => 'true',
         'mount'         => 'false',
         'rodent'        => 'false',
-        'stripes'       => 'false'
+        'stripes'       => 'false',
+        'glasses'       => 'false'
       ]);
 
     }

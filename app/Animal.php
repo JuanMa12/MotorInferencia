@@ -8,10 +8,10 @@ class Animal extends Model
 {
   protected $fillable = [
       'id','name', 'image', 'domestic','jump','bark','extinction',
-      'flying','mount','rodent','stripes'
+      'flying','mount','rodent','stripes','glasses'
   ];
 
   protected $hidden = [
-      
+
   ];
 }

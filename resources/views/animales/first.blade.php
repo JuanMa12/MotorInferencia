@@ -135,6 +135,22 @@
         </div>
       </div>
 
+      <div class="row hidden" id="glasses_content">
+        <div class="col-md-12">
+          <h3>Tiene anteojos?</h3>
+        </div>
+        <div class="col-md-6 col-xs-12 col-md-offset-3">
+          <div class="row top20">
+            <div class="col-md-6 col-xs-6">
+              <button class="btn btn-primary" onclick="glasses('true')"> <i class="fa fa-check-circle"></i> Si</button>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <button class="btn btn-danger" onclick="glasses('false')"> <i class="fa fa-times-circle"></i> No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 
       <div class="row hidden" id="result_content">
@@ -170,6 +186,8 @@
         <input type="text" name="stripes" id="stripes" class="form-control">
         <label for="">Mount</label>
         <input type="text" name="mount" id="mount" class="form-control">
+        <label for="">Glasses</label>
+        <input type="text" name="glasses" id="glasses" class="form-control">
       </div>
     </div>
   </div>
@@ -250,7 +268,7 @@
         if(value == 'false'){
           $('#flying_content').removeClass('hidden');
         }else{
-          $('#mount_content').removeClass('hidden');
+          $('#flying_content').removeClass('hidden');
         }
       }
 
@@ -273,7 +291,7 @@
         $('#jump').val(value);
         $('#jump_content').addClass('hidden');
         if(value == 'false'){
-          $('#flying_content').removeClass('hidden');
+          $('#glasses_content').removeClass('hidden');
         }else{
           var domestic_data = $('#domestic').val();
           var jump_data = $('#jump').val();
@@ -297,6 +315,21 @@
           var domestic_data = $('#domestic').val();
           var stripes_data = $('#stripes').val();
           ajax("/stripes",{domestic: domestic_data, stripes: stripes_data},
+            function(data){
+              result(data);
+            },10000);
+        }
+      }
+
+      function glasses(value){
+        $('#glasses').val(value);
+        $('#glasses_content').addClass('hidden');
+        if(value == 'false'){
+          $('#flying_content').removeClass('hidden');
+        }else{
+          var domestic_data = $('#domestic').val();
+          var glasses_data = $('#glasses').val();
+          ajax("/glasses",{domestic: domestic_data, glasses: glasses_data},
             function(data){
               result(data);
             },10000);
