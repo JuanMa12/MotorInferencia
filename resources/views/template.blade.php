@@ -18,7 +18,9 @@
         <style>
           .top20{ margin-top: 20px; }
           .img-animals { max-width: 200px; max-height: 150px; min-height: 150px; }
-          .img-big { max-width: 500px; max-height: 450px; min-height: 450px; }
+          .img-big { max-width: 500px; max-height: 450px; }
+          .img-medium { max-width: 220px; max-height: 210px; }
+          .img-small { max-width: 30px; max-height: 40px; }
         </style>
     </head>
     <body>

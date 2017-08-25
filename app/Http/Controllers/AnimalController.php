@@ -13,6 +13,12 @@ class AnimalController extends Controller
       return view('animales/index',compact('animals'));
     }
 
+    public function listAnimals()
+    {
+      $animals = Animal::all();
+      return view('recursos/index',compact('animals'));
+    }
+
     public function first()
     {
       return view('animales/first');
@@ -34,6 +40,46 @@ class AnimalController extends Controller
       $extinction = $request->extinction;
 
       $animal = Animal::where('domestic',$domestic)->where('extinction',$extinction)->first();
+
+      return response()->json(['animal' => $animal]);
+    }
+
+    public function rodent(Request $request)
+    {
+      $domestic = $request->domestic;
+      $rodent = $request->rodent;
+
+      $animal = Animal::where('domestic',$domestic)->where('rodent',$rodent)->first();
+
+      return response()->json(['animal' => $animal]);
+    }
+
+    public function mount(Request $request)
+    {
+      $domestic = $request->domestic;
+      $mount = $request->mount;
+
+      $animal = Animal::where('domestic',$domestic)->where('mount',$mount)->first();
+
+      return response()->json(['animal' => $animal]);
+    }
+
+    public function stripes(Request $request)
+    {
+      $domestic = $request->domestic;
+      $stripes = $request->stripes;
+
+      $animal = Animal::where('domestic',$domestic)->where('stripes',$stripes)->first();
+
+      return response()->json(['animal' => $animal]);
+    }
+
+    public function flying(Request $request)
+    {
+      $domestic = $request->domestic;
+      $flying = $request->flying;
+
+      $animal = Animal::where('domestic',$domestic)->where('flying',$flying)->first();
 
       return response()->json(['animal' => $animal]);
     }

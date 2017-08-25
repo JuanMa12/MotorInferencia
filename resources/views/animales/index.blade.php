@@ -28,6 +28,9 @@
           <a class="btn btn-primary btn-lg" href="{{url('/first')}}" role="button">
             <i class="fa fa-check-circle"></i> Empezemos</a>
         </div>
+        <div class="col-md-12 text-center">
+          <a href="{{url('/reglas')}}">Leer Reglas</a>
+        </div>
       </div>
     </div>
   </div>

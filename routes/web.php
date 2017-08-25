@@ -21,5 +21,12 @@
 
 Route::get('/', 'AnimalController@index');
 Route::get('/first', 'AnimalController@first');
+Route::get('/reglas', 'AnimalController@listAnimals');
+
 Route::get('/bark', 'AnimalController@bark');
 Route::get('/extinction', 'AnimalController@extinction');
+Route::get('/rodent', 'AnimalController@rodent');
+Route::get('/jump', 'AnimalController@jump');
+Route::get('/stripes', 'AnimalController@stripes');
+Route::get('/mount', 'AnimalController@mount');
+Route::get('/flying', 'AnimalController@flying');
