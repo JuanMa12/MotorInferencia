@@ -277,10 +277,14 @@
         }else{
           var domestic_data = $('#domestic').val();
           var jump_data = $('#jump').val();
-          ajax("/jump",{domestic: domestic_data, jump: jump_data},
-            function(data){
-              result(data);
-            },10000);
+          if(domestic_data == 'true'){
+            $('#stripes_content').removeClass('hidden');
+          }else{
+            ajax("/jump",{domestic: domestic_data, jump: jump_data},
+              function(data){
+                result(data);
+              },10000);
+          }
         }
       }
 
