@@ -19,7 +19,9 @@
 // Route::post('/valor','CondicionalController@valor');
 // Route::post('/tipo','CondicionalController@tipo');
 
-Route::get('/', 'AnimalController@index');
+Route::get('/', 'DifusseController@index');
+Route::get('/graph', 'DifusseController@graph');
+Route::get('/animals', 'AnimalController@index');
 Route::get('/first', 'AnimalController@first');
 Route::get('/reglas', 'AnimalController@listAnimals');
 
