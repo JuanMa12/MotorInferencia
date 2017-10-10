@@ -6,15 +6,18 @@
       <!-- one -->
       <div class="col-md-12 text-center top20 one">
         <div class="row">
-          <div class="col-md-6 col-md-offset-3">
+          <div class="col-md-12 text-center">
             <label for="">Digita la cantidad de puntos</label>
-            <input type="number" id="num_pounts" class="form-control">
           </div>
-          <div class="col-md-12 top20">
+          <div class="col-md-3 col-md-offset-3">
+            <input type="number" id="num_pounts" class="form-control" placeholder="0">
+          </div>
+          <div class="col-md-3">
             <button id="pounts" class="btn btn-primary">Siguiente
             <i class="fa fa-arrow-right"></i></button>
           </div>
           <div class="col-md-12 top20">
+            <hr style="border-top: 1px solid #27c;">
             <button id="calculate-pending" class="btn btn-success">Calcular pendiente
             <i class="fa fa-arrow-right"></i></button>
           </div>
@@ -61,6 +64,7 @@
           <div class="col-md-12 top20">
             <button id="view_calculate" class="btn btn-primary">Calcular pendiente
             <i class="fa fa-arrow-right"></i></button>
+            <a href="/graph" class="btn btn-success"><i class="fa fa-home"> </i> Home</a>
           </div>
         </div>
       </div>
@@ -111,6 +115,9 @@
             <p id="type_pending"></p>
             <p id="values"></p>
           </div>
+          <div class="col-md-12">
+            <a href="/graph" class="btn btn-primary"><i class="fa fa-home"> </i> Inicio</a>
+          </div>
         </div>
       </div>
 
@@ -158,7 +165,7 @@
                   $('#type_pending').text('Pendiente Positiva');
                   $('#type_pending').css('color','green');
               }else{
-                $('#value_pending').text('y= '+pend1+' x'+text);
+                $('#value_pending').text('Sin calcular');
                 $('#type_pending').text('Pendiente Negativa');
                 $('#type_pending').css('color','red');
               }
@@ -166,13 +173,13 @@
               //show data
               $('#values').text('x1='+x1+' x2='+x2+' || y1='+y1+' y2='+y2);
             }
+
+            //  graph_one
+            graph_one(x1,x2,y1,y2);
+
+            $('.four').addClass('hidden');
+            $('.five').removeClass('hidden');
           }
-
-          //  graph_one
-          graph_one(x1,x2,y1,y2);
-
-          $('.four').addClass('hidden');
-          $('.five').removeClass('hidden');
     });
 
     // ################### three ###################
