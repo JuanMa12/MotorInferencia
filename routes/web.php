@@ -19,7 +19,7 @@
 // Route::post('/valor','CondicionalController@valor');
 // Route::post('/tipo','CondicionalController@tipo');
 
-Route::get('/', 'DifusseController@index');
+Route::get('/difusse', 'DifusseController@index');
 Route::get('/graph', 'DifusseController@graph');
 Route::get('/animals', 'AnimalController@index');
 Route::get('/first', 'AnimalController@first');
@@ -33,3 +33,7 @@ Route::get('/stripes', 'AnimalController@stripes');
 Route::get('/mount', 'AnimalController@mount');
 Route::get('/flying', 'AnimalController@flying');
 Route::get('/glasses', 'AnimalController@glasses');
+
+Route::get('/', function(){
+  return view('neurons/index');
+});
