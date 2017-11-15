@@ -61,13 +61,13 @@
         X:
         <select id="x-control" class="form-control">
           <option value="human" selected>Humano</option>
-          <option value="ai-random">AI: Aleatorio</option>
-          <option value="ai-easy">AI: Facil</option>
-          <option value="ai-smart">AI: Inteligente</option>
-          <option value="ai-neural">AI: Red Neuronal</option>
+          <option value="ai-random">Aleatorio</option>
+          <option class="hidden" value="ai-easy">AI: Facil</option>
+          <option value="ai-smart">Inteligente</option>
+          <option class="hidden" value="ai-neural">AI: Red Neuronal</option>
         </select>
         <br>
-        <textarea id="x-ai-neural-import" class="form-control"
+        <textarea class="hidden" id="x-ai-neural-import" class="form-control"
             placeholder="Seleccione &quot;AI: red neuronal&quot; &amp; pegar en una red"
             disabled
         ></textarea>
@@ -76,13 +76,13 @@
         O:
         <select id="o-control" class="form-control">
           <option value="human" selected>Humano</option>
-          <option value="ai-random">AI: Aleatorio</option>
-          <option value="ai-easy">AI: Facil</option>
-          <option value="ai-smart">AI: Inteligente</option>
-          <option value="ai-neural">AI: Red Neuronal</option>
+          <option value="ai-random">Aleatorio</option>
+          <option class="hidden" value="ai-easy">AI: Facil</option>
+          <option value="ai-smart">Inteligente</option>
+          <option class="hidden" value="ai-neural">AI: Red Neuronal</option>
         </select>
         <br>
-        <textarea id="o-ai-neural-import" class="form-control"
+        <textarea class="hidden" id="o-ai-neural-import" class="form-control"
             placeholder="Seleccione &quot;AI: red neuronal&quot; &amp; pegar en una red"
             disabled
         ></textarea>
@@ -90,8 +90,8 @@
     </div>
     <div id="controls">
       <input id="pause" type="button" value="Pause AI"
-          data-paused="Seguir AI" data-unpaused="Pausar AI" class="btn btn-primary">
-      <input id="step" type="button" value="Adelantar AI" class="btn btn-success">
+          data-paused="Seguir" data-unpaused="Pausar" class="btn btn-primary">
+      <input id="step" type="button" value="Adelantar" class="btn btn-success">
       <input id="undo" type="button" value="Deshacer" class="btn btn-warning">
       <input id="restart" type="button" value="Reiniciar" class="btn btn-danger">
     </div>
