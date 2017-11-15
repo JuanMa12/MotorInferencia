@@ -37,3 +37,14 @@ Route::get('/glasses', 'AnimalController@glasses');
 Route::get('/', function(){
   return view('neurons/index');
 });
+
+//Route::get('/', 'NeuronController@index');
+Route::resource('/neuron','NeuronController');
+Route::get('/numbers','NeuronController@numbers');
+Route::get('/list','NeuronController@list_numbers');
+Route::get('/y1','NeuronController@y1');
+
+
+// Route::get('/create', 'NeuronController@create');
+// Route::post('/neuron', 'NeuronController@store');
+// Route::get('/neurona/:id', 'NeuronController@show');
